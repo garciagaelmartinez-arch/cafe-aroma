@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café Aroma | Básico</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #eef2f0;
+    color: #1f2a26;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    line-height: 1.6;
+  }
+  .card {
+    width: 100%;
+    max-width: 560px;
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,.12);
+  }
+  .cover {
+    height: 160px;
+    background: linear-gradient(135deg, #2e7d5b, #7ec8a0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+  }
+  .body { padding: 32px 28px 36px; text-align: center; }
+  .badge {
+    display: inline-block;
+    background: #e6f5ee;
+    color: #2e7d5b;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+  }
+  h1 { font-size: 1.9rem; margin-bottom: 8px; letter-spacing: -.5px; }
+  .tagline { color: #2e7d5b; font-weight: 600; margin-bottom: 16px; }
+  .desc { color: #5d6b66; font-size: .97rem; margin-bottom: 26px; }
+  .info {
+    text-align: left;
+    background: #f6faf8;
+    border-radius: 16px;
+    padding: 18px 20px;
+    margin-bottom: 26px;
+  }
+  .info-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 0;
+    font-size: .93rem;
+    color: #3b4a45;
+  }
+  .info-row:not(:last-child) { border-bottom: 1px solid #e3ede8; }
+  .info-row span:first-child { font-size: 1.1rem; }
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .btn-wa {
+    background: #25D366;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(37,211,102,.35);
+  }
+  .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(37,211,102,.45); }
+  .btn-call {
+    background: #fff;
+    color: #2e7d5b;
+    border: 2px solid #cfe6dc;
+    margin-top: 10px;
+  }
+  .btn-call:hover { background: #f6faf8; }
+  footer {
+    text-align: center;
+    font-size: .78rem;
+    color: #93a29c;
+    padding: 18px;
+    border-top: 1px solid #eef2f0;
+  }
+  .float-wa {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    width: 58px;
+    height: 58px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    text-decoration: none;
+    box-shadow: 0 8px 22px rgba(37,211,102,.5);
+    animation: pulse 2.4s infinite;
+  }
+  @keyframes pulse {
+    0%,100% { box-shadow: 0 8px 22px rgba(37,211,102,.5); }
+    50%     { box-shadow: 0 8px 22px rgba(37,211,102,.5), 0 0 0 14px rgba(37,211,102,.12); }
+  }
+  @media (max-width: 480px) {
+    .body { padding: 26px 20px 30px; }
+    h1 { font-size: 1.6rem; }
+    .cover { height: 130px; font-size: 52px; }
+  }
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="cover">☕</div>
+    <div class="body">
+      <span class="badge">Paquete Básico</span>
+      <h1>Café Aroma</h1>
+      <p class="tagline">Café de especialidad en el corazón de la ciudad</p>
+      <p class="desc">
+        Granos seleccionados, tostado artesanal y repostería fresca todos los días.
+        Ven a disfrutar de un buen café en un espacio tranquilo y acogedor.
+      </p>
+      <div class="info">
+        <div class="info-row"><span>🕘</span><span><strong>Horario:</strong> Lun a Sáb · 8:00 am – 8:00 pm</span></div>
+        <div class="info-row"><span>📍</span><span><strong>Dirección:</strong> Av. Central #123, Col. Centro</span></div>
+        <div class="info-row"><span>📞</span><span><strong>Teléfono:</strong> +52 123 456 7890</span></div>
+        <div class="info-row"><span>✉️</span><span><strong>Correo:</strong> hola@cafearoma.com</span></div>
+      </div>
+      <a class="btn btn-wa" href="https://wa.me/521234567890?text=Hola,%20quiero%20más%20información" target="_blank">
+        💬 Escríbenos por WhatsApp
+      </a>
+      <a class="btn btn-call" href="tel:+521234567890">📞 Llamar ahora</a>
+    </div>
+    <footer>© 2025 Café Aroma · Todos los derechos reservados</footer>
+  </main>
+  <a class="float-wa" href="https://wa.me/521234567890" target="_blank" aria-label="WhatsApp">💬</a>
+</body>
+</html>
